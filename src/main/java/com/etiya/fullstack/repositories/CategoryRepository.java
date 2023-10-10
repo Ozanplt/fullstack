@@ -10,6 +10,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface CategoryRepository extends JpaRepository<Category,Integer> {
+    Category findByName(String name);
     @Query("Select new com.etiya.fullstack.entities.responses.category.GetAllCategoryResponse(c.id,c.name)" +
             " From Category c")
     List<GetAllCategoryResponse> getAllForListing();
