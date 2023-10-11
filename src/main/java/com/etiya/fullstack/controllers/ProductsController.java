@@ -1,10 +1,12 @@
 package com.etiya.fullstack.controllers;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/products")
 @CrossOrigin
+@SecurityRequirement(name="securityScheme")
 public class ProductsController {
     @GetMapping
     public void getAll(){

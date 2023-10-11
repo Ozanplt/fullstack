@@ -5,6 +5,7 @@ import com.etiya.fullstack.entities.requests.category.UpdateCategoryRequest;
 import com.etiya.fullstack.entities.responses.category.GetAllCategoryResponse;
 import com.etiya.fullstack.entities.responses.category.GetCategoryResponse;
 import com.etiya.fullstack.services.abstracts.CategoryService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/categories")
 @CrossOrigin
+@SecurityRequirement(name="securityScheme")
 public class CategoriesController {
     private final CategoryService categoryService;
 
