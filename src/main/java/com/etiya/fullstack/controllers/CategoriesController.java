@@ -25,7 +25,7 @@ public class CategoriesController {
     }
 
     @GetMapping
-    public ResponseEntity<List<GetAllCategoryResponse>> getAll(){
+    public ResponseEntity<List<GetAllCategoryResponse>> getAll() throws InterruptedException {
         return new ResponseEntity<>(categoryService.getAll(), HttpStatus.OK);
     }
 
